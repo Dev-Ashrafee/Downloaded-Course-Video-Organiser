@@ -26,12 +26,14 @@ body.light-mode {
   width: 80%;
   margin-top: 20px;
 }
+
 .header-section {
   display: flex;
   margin-bottom: 20px;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  
 }
 
 .controls {
@@ -52,6 +54,7 @@ body.light-mode {
   border: 1px solid #444;
   height: 34px;
 }
+
 #folderInput::file-selector-button {
   margin-right: 10px;
   border: none;
@@ -62,6 +65,7 @@ body.light-mode {
   cursor: pointer;
   transition: background 0.2s ease-in-out;
 }
+
 #folderInput::file-selector-button:hover {
   background: #555;
 }
@@ -71,8 +75,9 @@ body.light-mode {
   line-height: 28px;
   align-items: center;
   position: relative;
-  width: 500px;
-  margin: 0px 5px ;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px 5px;
 }
 
 .search-bar input {
@@ -84,7 +89,6 @@ body.light-mode {
   background-color: #1f1f1f; /* Dark mode background color */
   color: #ffffff; /* Dark mode text color */
   width: 100%;
-
   height: 38px;
   line-height: 28px;
   transition: 0.3s ease;
@@ -109,7 +113,8 @@ input:hover {
   background: #1f1f1f;
   display: flex;
   flex-direction: row;
-  width: 246px;
+  width: 100%;
+  max-width: 246px;
   height: 39px;
   justify-content: flex-start;
   border: 1px solid #444; /* Dark mode border color */
@@ -130,10 +135,9 @@ input:hover {
   font-size: 15px;
   min-width: max-content;
   justify-content: center;
-
 }
 
-.sort-options-select{
+.sort-options-select {
   width: 100%;
   margin-right: 3px;
   border-radius: 8px;
@@ -145,10 +149,6 @@ input:hover {
   background: #1f1f1f;
   color: white;
   border: none;
-} 
-
-#sortSelect option{
-  
 }
 
 .video-player {
@@ -182,7 +182,9 @@ input:hover {
 .video-item button {
   border-radius: 8px;
   padding: 5px 10px;
+  text-wrap: nowrap;
 }
+
 .video-controls label {
   color: #ffffff; /* Dark mode text color */
 }
@@ -210,4 +212,51 @@ input:hover {
 .completed {
   text-decoration: line-through;
   color: #874646; /* Color for completed items */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and above */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar,
+  .sort-options,
+  .folder-selector {
+    
+    margin-bottom: 10px;
+  }
+
+  .sort-label {
+    width: 100%;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  .search-bar,
+  .sort-options,
+  .folder-selector {
+    margin-bottom: 10px;
+  }
+
+  .sort-label {
+    width: 100%;
+  }
+
+  .video-player {
+    width: 100%;
+  }
 }
