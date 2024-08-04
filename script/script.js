@@ -42,7 +42,7 @@ function renderVideoList(files) {
 
     // Create a button for marking the video as completed
     const completedButton = document.createElement("button");
-    completedButton.textContent = "Mark as Completed";
+    completedButton.textContent = "Completed ?";
     completedButton.disabled = completedVideos.has(file.name);
     completedButton.addEventListener("click", (event) => {
       event.stopPropagation(); // Prevent click event on video item
