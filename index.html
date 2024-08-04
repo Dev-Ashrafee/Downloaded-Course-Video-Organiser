@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Video Platform</title>
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="./style/style.css" />
   </head>
 
   <body>
     <div class="container">
+      <!-- Container for folder selection, search bar, and sort options -->
       <div
         style="
           display: flex;
@@ -16,6 +18,7 @@
           align-items: center;
         "
       >
+        <!-- Folder selector for uploading videos -->
         <div class="folder-selector">
           <label for="folderInput">Select Folder:</label>
           <input
@@ -26,9 +29,13 @@
             multiple
           />
         </div>
+        
+        <!-- Search bar for filtering videos -->
         <div class="search-bar">
           <input type="text" id="searchInput" placeholder="Search videos..." />
         </div>
+
+        <!-- Sort options for arranging the video list -->
         <div class="sort-options">
           <label for="sortSelect">Sort by:</label>
           <select id="sortSelect">
@@ -38,12 +45,17 @@
         </div>
       </div>
 
+      <!-- Video player section -->
       <div class="video-player">
         <video id="videoPlayer" controls width="100%">
+          <!-- Placeholder for video source -->
           <source id="videoSource" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <!-- Area for displaying video description -->
         <div id="videoDescription"></div>
+
+        <!-- Video controls for volume, speed, and full-screen mode -->
         <div class="video-controls">
           <label for="volumeControl">Volume:</label>
           <input
@@ -64,9 +76,12 @@
           <button id="fullScreenBtn">Full Screen</button>
         </div>
       </div>
+
+      <!-- Section for displaying the list of videos -->
       <div class="video-list" id="videoList"></div>
     </div>
 
+    <!-- Link to external JavaScript file for functionality -->
     <script src="./script/script.js"></script>
   </body>
 </html>

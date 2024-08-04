@@ -95,5 +95,5 @@ body.light-mode {
 
 .completed {
   text-decoration: line-through;
-  color: #888;
+  color: #888; /* Color for completed items */
 }
